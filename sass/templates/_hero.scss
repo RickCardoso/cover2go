@@ -4,7 +4,7 @@ section.hero {
     background-position: center bottom;
     background-size: contain;
     background-repeat: no-repeat;
-    padding-bottom: 14.5em;
+    padding-bottom: 4em;
 
     & .hero-title {
         color: #fffefe;
@@ -18,6 +18,19 @@ section.hero {
         
         & strong {
             font-weight: 700;
+        }
+
+        @media screen and (max-width: 1200px) {
+            margin-top: 0.5em;
+            font-size: 2.5em;
+        }
+        
+        @media screen and (max-width: 767px) {
+            font-size: 2em;
+        }
+        
+        @media screen and (max-width: 575px) {
+            font-size: 1.8em;
         }
     }
 
@@ -43,6 +56,8 @@ section.hero {
             // mix-blend-mode: multiply;
             border-radius: 4px;
             height: 4.3125em;
+            max-width: 550px;
+            width: 100%;
             overflow: hidden;
             position: absolute;
             top: 50%;
@@ -58,7 +73,7 @@ section.hero {
                 font-weight: 500;
                 color: #757575;
                 font-family: $museo-sans;
-                width: 355px;
+                width: 64.545454%;
                 text-transform: uppercase;
                 text-align: center;
             }
@@ -71,7 +86,7 @@ section.hero {
                 font-size: 1.1875em;
                 color: #25686d;
                 height: 100%;
-                width: 195px;
+                width: 35.454545%;
                 text-transform: uppercase;
                 transition: background-color .3s;
 
@@ -89,11 +104,15 @@ section.hero {
         align-items: flex-start;
         transition: all .5s .3s;
         opacity: 0;
-        margin-top: 10.5em;
+        margin: 10.5em -0.5em;
 
         &.loaded {
             opacity: 1;
             transform: translateY(-50%);
+
+            @media screen and (max-width: 1200px) {
+                transform: none;
+            }
         }
 
         & .plan {
@@ -108,6 +127,7 @@ section.hero {
             justify-content: center;
             align-items: flex-start;
             flex-flow: row wrap;
+            margin: 0 0.5em;
 
             &.celular {
                 & .plan-price {
@@ -180,6 +200,29 @@ section.hero {
                     }
                 }
             }
+
+            @media screen and (max-width: 575px) {
+                font-size: 0.7em;   
+                
+                & .plan-range {
+                    flex-flow: row wrap;
+                    height: 66px;
+                    padding: 0 0.5em;
+
+                    & .icon-left,
+                    & .range {
+                        margin: -1.5em 0.5em;
+                    }
+                }
+            }
         }
+
+        @media screen and (max-width: 575px) {
+            margin-bottom: 0;
+        }
+    }
+
+    @media screen and (max-width: 575px) {
+        background-position-y: 7em;
     }
 }

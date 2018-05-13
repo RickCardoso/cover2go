@@ -23,10 +23,13 @@
 
             <nav class="navigation-bar">
                 <div class="logo-wrapper">
-                    <img src="assets/images/logo-vertical.png" alt="cover2go">
+                    <img class="desktop-only" src="assets/images/logo-vertical.png" alt="cover2go">
+                    <img class="mobile-only" src="assets/images/logo-horizontal.png" alt="cover2go">
                 </div>
 
-                <div class="nav-wrapper">
+                <button type="button" class="navbar-toggler mobile-only"><i class="fal fa-bars"></i></button>
+
+                <div class="nav-wrapper" style="display: none;">
                     <div class="nav-bar">
                         <ul>
                             <li class="current-page"><a href="#">Ativar Proteção</a></li>
@@ -144,6 +147,9 @@
     </main>
 
     <footer class="site-footer">
+        <div class="footer-ornaments">
+            <img src="assets/images/ornaments-footer.png" alt="">
+        </div>
         <div class="content-wrapper">
             <div class="identity">
                 <div class="logo-wrapper">
@@ -175,15 +181,29 @@
 
 </body>
 
+<script src="assets/vendor/jquery/jquery-3.2.1.js" type="text/javascript"></script> <!-- jQuery -->
+<script defer src="assets/vendor/font-awesome/fontawesome-all.min.js"></script> <!-- Font-Awesome -->
+
 <script>
     window.onload = function() {
         document.getElementById('plans-wrapper').classList.add('loaded');
         document.getElementById('code-wrapper').classList.add('loaded');
     }
-</script>
 
-<!-- Font-Awesome -->
-  <script defer src="assets/vendor/font-awesome/fontawesome-all.min.js"></script>
-<!-- -->
+    $(document).ready(function() {
+        $('.navbar-toggler').click(function() {
+            $('.nav-wrapper').slideToggle();
+        });
+
+        $(window).bind('resize load', function() {
+            if ($(window).width() < 558) {
+                $('#code').attr('placeholder', 'código');
+            }
+            else {
+                $('#code').attr('placeholder', 'Entre com seu código aqui');
+            }
+        });
+    });
+</script>
 
 </html>

@@ -11,22 +11,47 @@
             }
         }
     }
+
+    @media screen and (max-width: 991px) {
+        &.image-text {
+            & .image {
+                & img {
+                    max-width: 100%;
+                    margin-left: 0;
+                }
+            }
+        }
+    }
 }
 
 #como {
     background-image: url('assets/images/icon-como.png');
     background-position: top right;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: auto;
     padding-top: 2em;
+
+    @media screen and (max-width: 575px) {
+        padding-top: 3.5em;        
+    }
 }
 
 #onde {
     background-image: url('assets/images/icon-onde.png');
     background-position: top right;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: auto;
     padding-top: 2em;
+
+    @media screen and (max-width: 575px) {
+        padding-top: 3.5em;        
+    }
+}
+
+#como-utilizar {
+    & .image {
+        text-align: right;
+    }
 }
 
 #quem-somos {
@@ -35,11 +60,40 @@
     }
 
     &.image-text {
+        margin-top: 3em;
+
         & .image {
             & img {
+                margin-top: -10%;
                 margin-left: -9%;
                 max-width: 122%;
             }
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        &.image-text {
+            margin-top: 0;
+
+            & .image {
+                & img {
+                    margin-top: 0;
+                    margin-left: 0;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 575px) {
+        & button {
+            font-size: 1em;
+        }
+    }
+
+    @media screen and (max-width: 414px) {
+        & button {
+            font-size: 0.8em;
         }
     }
 }
