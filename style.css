@@ -377,6 +377,7 @@ section.hero {
     background-image: url("assets/images/background-footer.png");
     background-position: bottom center;
     background-size: cover;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    margin-top: -6em; }
 
 /*# sourceMappingURL=style.css.map */
