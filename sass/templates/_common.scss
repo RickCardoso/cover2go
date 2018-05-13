@@ -1,3 +1,19 @@
+.desktop-only {
+    display: initial;
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+}
+
+.mobile-only {
+    display: none;
+
+    @media screen and (max-width: 767px) {
+        display: inherit;
+    }
+}
+
 .content-wrapper {
     max-width: 1230px;
     margin: auto;

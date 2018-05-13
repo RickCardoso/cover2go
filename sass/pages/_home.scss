@@ -4,12 +4,35 @@
     background-size: cover;
     background-repeat: no-repeat;
 
-    & .site-footer {        
+    & .site-footer {
         background-image:  url('assets/images/background-footer.png');
         background-position: bottom center;
         background-size: cover;
         background-repeat: no-repeat;
-        margin-top: -6em;
+        position: relative;
+
+        & .footer-ornaments {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 0;
+
+            & img {
+                max-width: unset;
+            }
+            // background-image:  url('assets/images/ornaments-footer.png');
+            // background-position: top center;
+            // background-size: cover;
+            // background-repeat: no-repeat;
+        }
+
+        & .content-wrapper {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
         // position: relative;
         // overflow: visible;
 

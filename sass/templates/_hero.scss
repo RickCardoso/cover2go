@@ -19,6 +19,14 @@ section.hero {
         & strong {
             font-weight: 700;
         }
+
+        @media screen and (max-width: 1200px) {
+            font-size: 2.5em;
+        }
+        
+        @media screen and (max-width: 767px) {
+            font-size: 2em;
+        }
     }
 
     & .code-activation-wrapper {
@@ -94,6 +102,10 @@ section.hero {
         &.loaded {
             opacity: 1;
             transform: translateY(-50%);
+
+            @media screen and (max-width: 1200px) {
+                transform: none;
+            }
         }
 
         & .plan {
