@@ -277,11 +277,6 @@ footer.site-footer .copyright {
   font-size: 0.75em;
   color: #a33b11;
   margin: 2.5em 0; }
-@media screen and (max-width: 991px) {
-  footer.site-footer {
-    height: 500px; }
-    footer.site-footer .identity {
-      flex: 0 0 100%; } }
 
 .desktop-only {
   display: initial; }

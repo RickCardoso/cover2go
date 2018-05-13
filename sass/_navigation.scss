@@ -284,13 +284,5 @@ footer.site-footer {
         font-size: 0.75em;
         color: #a33b11;
         margin: 2.5em 0;
-    }
-
-    @media screen and (max-width: 991px) {
-        height: 500px;
-        
-        & .identity {
-            flex: 0 0 100%;
-        }
-    }    
+    }  
 }
