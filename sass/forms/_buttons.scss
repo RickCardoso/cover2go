@@ -1,0 +1,35 @@
+.btn-std {
+    text-decoration: none;
+    -webkit-appearance: none;
+    background: #e54647;
+    border: none;
+    border-radius: 2px 4px 4px 2px;
+    color: #461313;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: $museo-sans;
+    transition: background-color .3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3em;
+
+    & strong {
+        font-weight: 700;
+    }
+
+    &:hover,
+    &:focus {
+        background: lighten(#e54647, 10%);
+    }
+
+    &.block {
+        width: 100%;
+    }
+
+    & .icon-right {
+        margin-left: 1.5em;
+        fill: #461313;
+        opacity: 0.5;
+    }
+}

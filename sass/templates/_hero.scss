@@ -1,0 +1,164 @@
+section.hero {
+    padding-top: 1.25em;
+    background-image: url('assets/images/background-hero.png');
+    background-position: center bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-bottom: 15em;
+
+    & .hero-title {
+        color: #fffefe;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: 3em;
+        line-height: 1.3;
+        text-align: center;
+        max-width: 890px;
+        margin: auto;
+        
+        & strong {
+            font-weight: 700;
+        }
+    }
+
+    & .code-activation-wrapper {
+        margin: 2.5em 0;
+        display: flex;
+
+        & .code-input {
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f3f3f3;
+            box-shadow: 13px 13px 21px 0 rgba(#d85263, 0.44);
+            // mix-blend-mode: multiply;
+            border-radius: 4px;
+            height: 4.3125em;
+            overflow: hidden;
+
+            & input {
+                border: none;
+                background-color: transparent;
+                outline: none;
+                font-size: 1.0625em;
+                font-weight: 500;
+                color: #757575;
+                font-family: $museo-sans;
+                width: 355px;
+                text-transform: uppercase;
+                text-align: center;
+            }
+
+            & button {
+                -webkit-appearance: none;
+                border: none;
+                background: #5dc6cd;
+                font-family: $museo-sans;
+                font-size: 1.1875em;
+                color: #25686d;
+                height: 100%;
+                width: 195px;
+                text-transform: uppercase;
+                transition: background-color .3s;
+
+                &:hover,
+                &:focus {
+                    background: darken(#5dc6cd, 15%);
+                }
+            }
+        }
+    }
+
+    & .plans-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        & .plan {
+            width: 216px;
+            height: 158px;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 43px 43px 68px 0 rgba(#d85263, 0.42);
+            // mix-blend-mode: multiply;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-flow: row wrap;
+
+            &.celular {
+                & .plan-price {
+                    color: #f06f79;
+                }
+
+                & .price-sub-super {
+                    color: #ef6a74;
+                }
+            }
+
+            &.gadgets {
+                & .plan-price {
+                    color: #665d8e;
+                }
+
+                & .price-sub-super {
+                    color: #67598b;
+                }
+            }
+
+            & .plan-price {
+                margin: 21px auto;
+                font-size: 6.0625em;
+                letter-spacing: -5px;
+                position: relative;
+                padding-right: 0.4em;
+                line-height: 0.75;
+            }
+
+            & .currency,
+            & .decimal-places {   
+                position: absolute;
+                right: 0;
+                font-size: 0.28125em;
+                font-weight: 700;
+                letter-spacing: -2px;
+                // margin: 0;
+            }
+
+            & .currency {
+                top: 0;
+            }
+
+            & .decimal-places {   
+                bottom: 0;          
+                opacity: 0.5;
+            }
+
+            & .plan-range {
+                flex: 0 0 100%;
+                height: 44px;
+                background-color: rgba(#f0f0f0, 0.5);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                & .icon-left {
+                    margin-right: 1em;
+                    fill: #acacac;
+                    opacity: 0.5;
+                }
+                
+                & .range {
+                    font-size: 13px;
+                    color: #7d7d7d;
+                    
+                    & .value {
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+#o-que-e {
+    & .title {
+        font-size: 3em;
+    }
+}
+
+#como {
+    background-image: url('assets/images/icon-como.png');
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 2em;
+}
+
+#onde {
+    background-image: url('assets/images/icon-onde.png');
+    background-position: top right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 2em;
+}
+
+#quem-somos {
+    & button {
+        font-size: 1.375em;
+    }
+}
