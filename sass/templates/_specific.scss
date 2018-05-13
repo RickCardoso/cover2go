@@ -2,6 +2,15 @@
     & .title {
         font-size: 3em;
     }
+
+    &.image-text {
+        & .image {
+            & img {
+                max-width: 130%;
+                margin-left: -20%;
+            }
+        }
+    }
 }
 
 #como {
@@ -23,5 +32,14 @@
 #quem-somos {
     & button {
         font-size: 1.375em;
+    }
+
+    &.image-text {
+        & .image {
+            & img {
+                margin-left: -9%;
+                max-width: 122%;
+            }
+        }
     }
 }

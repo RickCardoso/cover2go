@@ -237,6 +237,9 @@ footer.site-footer {
 
 #o-que-e .title {
   font-size: 3em; }
+#o-que-e.image-text .image img {
+  max-width: 130%;
+  margin-left: -20%; }
 
 #como {
   background-image: url("assets/images/icon-como.png");
@@ -254,6 +257,9 @@ footer.site-footer {
 
 #quem-somos button {
   font-size: 1.375em; }
+#quem-somos.image-text .image img {
+  margin-left: -9%;
+  max-width: 122%; }
 
 section.hero {
   padding-top: 1.25em;
@@ -261,7 +267,7 @@ section.hero {
   background-position: center bottom;
   background-size: contain;
   background-repeat: no-repeat;
-  padding-bottom: 15em; }
+  padding-bottom: 14.5em; }
   section.hero .hero-title {
     color: #fffefe;
     text-transform: uppercase;
@@ -274,8 +280,14 @@ section.hero {
     section.hero .hero-title strong {
       font-weight: 700; }
   section.hero .code-activation-wrapper {
-    margin: 2.5em 0;
-    display: flex; }
+    margin: 5em 0;
+    position: relative;
+    transition: all .5s .3s;
+    opacity: 0;
+    transform: translateY(-70px); }
+    section.hero .code-activation-wrapper.loaded {
+      opacity: 1;
+      transform: translateY(0); }
     section.hero .code-activation-wrapper .code-input {
       margin: auto;
       display: flex;
@@ -285,7 +297,12 @@ section.hero {
       box-shadow: 13px 13px 21px 0 rgba(216, 82, 99, 0.44);
       border-radius: 4px;
       height: 4.3125em;
-      overflow: hidden; }
+      overflow: hidden;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1; }
       section.hero .code-activation-wrapper .code-input input {
         border: none;
         background-color: transparent;
@@ -313,7 +330,13 @@ section.hero {
   section.hero .plans-wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; }
+    align-items: flex-start;
+    transition: all .5s .3s;
+    opacity: 0;
+    margin-top: 10.5em; }
+    section.hero .plans-wrapper.loaded {
+      opacity: 1;
+      transform: translateY(-50%); }
     section.hero .plans-wrapper .plan {
       width: 216px;
       height: 158px;

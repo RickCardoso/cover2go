@@ -4,7 +4,7 @@ section.hero {
     background-position: center bottom;
     background-size: contain;
     background-repeat: no-repeat;
-    padding-bottom: 15em;
+    padding-bottom: 14.5em;
 
     & .hero-title {
         color: #fffefe;
@@ -22,8 +22,16 @@ section.hero {
     }
 
     & .code-activation-wrapper {
-        margin: 2.5em 0;
-        display: flex;
+        margin: 5em 0;
+        position: relative;
+        transition: all .5s .3s;
+        opacity: 0;
+        transform: translateY(-70px);
+
+        &.loaded {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
         & .code-input {
             margin: auto;
@@ -36,6 +44,11 @@ section.hero {
             border-radius: 4px;
             height: 4.3125em;
             overflow: hidden;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
 
             & input {
                 border: none;
@@ -74,6 +87,14 @@ section.hero {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+        transition: all .5s .3s;
+        opacity: 0;
+        margin-top: 10.5em;
+
+        &.loaded {
+            opacity: 1;
+            transform: translateY(-50%);
+        }
 
         & .plan {
             width: 216px;
