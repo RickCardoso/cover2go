@@ -27,8 +27,10 @@
                     <img class="mobile-only" src="assets/images/logo-horizontal.png" alt="cover2go">
                 </div>
 
-                <div class="nav-wrapper">
-                    <div class="nav-bar desktop-only">
+                <button type="button" class="navbar-toggler mobile-only"><i class="fal fa-bars"></i></button>
+
+                <div class="nav-wrapper" style="display: none;">
+                    <div class="nav-bar">
                         <ul>
                             <li class="current-page"><a href="#">Ativar Proteção</a></li>
                             <li><a href="#">Planos</a></li>
@@ -45,18 +47,6 @@
                             <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
                         </ul>
                     </div>
-                </div>
-
-                <button type="button" class="navbar-toggler mobile-only"><i class="fal fa-bars"></i></button>
-
-                <div class="nav-bar mobile-only" style="display: none;">
-                    <ul>
-                        <li class="current-page"><a href="#">Ativar Proteção</a></li>
-                        <li><a href="#">Planos</a></li>
-                        <li><a href="#">Quem Somos</a></li>
-                        <li><a href="#">Dúvidas Frequentes</a></li>
-                        <li><a href="#">Contato</a></li>
-                    </ul>
                 </div>
             </nav>
 
@@ -202,7 +192,16 @@
 
     $(document).ready(function() {
         $('.navbar-toggler').click(function() {
-            $('.nav-bar.mobile-only').slideToggle();
+            $('.nav-wrapper').slideToggle();
+        });
+
+        $(window).bind('resize load', function() {
+            if ($(window).width() < 558) {
+                $('#code').attr('placeholder', 'código');
+            }
+            else {
+                $('#code').attr('placeholder', 'Entre com seu código aqui');
+            }
         });
     });
 </script>

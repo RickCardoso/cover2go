@@ -31,6 +31,7 @@
         & .title {
             color: #e54647;
             font-size: 2.5em;
+            margin-top: 1.5em;
         }
 
         & p {
@@ -49,8 +50,17 @@
             padding: 0 20px;
         }
 
-        &.image-text {
+        & .text {
+            max-width: 516px;
+            margin-right: auto;
+        }
 
+        @media screen and (max-width: 991px) {
+            & .image,
+            & .text {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
         }
     }
 }   

@@ -30,81 +30,41 @@ nav.navigation-bar {
     & .nav-bar {
         flex: 0 0 100%;
 
-        &.desktop-only {
-            & ul {
-                @extend %flex-list;
-                justify-content: flex-end;
+        & ul {
+            @extend %flex-list;
+            justify-content: flex-end;
 
-                & li {
-                    padding-top: 1.875em;
-                    border-top: 3px solid transparent;
+            & li {
+                padding-top: 1.875em;
+                border-top: 3px solid transparent;
 
-                    & a {
-                        margin: 0 -9px;
-                        padding: 9px;
-                        color: #b13b4c;
-                        text-decoration: none;
-                        font-size: 0.75em;
-                        display: inline-block;
+                & a {
+                    margin: 0 -9px;
+                    padding: 9px;
+                    color: #b13b4c;
+                    text-decoration: none;
+                    font-size: 0.75em;
+                    display: inline-block;
 
-                        &:hover,
-                        &:focus {
-                            color: #fff;
-                        }
-                    }
-
-                    &.current-page {
-                        border-top-color: #fff; // TODO: GRADIENT
-
-                        & a {
-                            color: #fff;
-                        }
-                    }
-
-                    &:not(:first-of-type) {
-                        &:before {
-                            content: '/';
-                            margin: 0 0.75em;
-                            color: #e2596d;
-                        }
+                    &:hover,
+                    &:focus {
+                        color: #fff;
                     }
                 }
-            }
-        }
 
-        &.mobile-only {
-            & ul {
-                @extend %flex-list;
-                flex-flow: row wrap;
-                flex: 0 0 100%;
-                padding-top: 2em;
-
-                & li {
-                    flex: 0 0 100%;
-                    border-bottom: 3px solid transparent;
+                &.current-page {
+                    border-top-color: #fff; // TODO: GRADIENT
 
                     & a {
-                        margin: 0 -9px;
-                        padding: 9px;
-                        color: #b13b4c;
-                        text-decoration: none;
-                        font-size: 0.75em;
-                        display: block;
-                        text-align: center;
-
-                        &:hover,
-                        &:focus {
-                            color: #fff;
-                        }
+                        color: #fff;
                     }
+                }
 
-                    &.current-page {
-                        border-bottom-color: #fff; // TODO: GRADIENT
-                        background-color: rgba(#fff, 0.1);
-
-                        & a {
-                            color: #fff;
-                        }
+                &:not(:first-of-type) {
+                    &:before {
+                        content: '/';
+                        margin: 0 0.75em;
+                        color: #e2596d;
                     }
                 }
             }
@@ -144,6 +104,12 @@ nav.navigation-bar {
         }
     }
 
+    @media screen and (min-width: 768px) {
+        & .nav-wrapper {
+            display: block !important;
+        }
+    }
+
     @media screen and (max-width: 767px) {
         & .logo-wrapper {
             max-width: 200px;
@@ -151,14 +117,58 @@ nav.navigation-bar {
         }
 
         & .nav-wrapper {
-            flex: 0 0 auto;
+            flex: 0 0 100%;
+        }
+
+        & .nav-bar {
+            & ul {
+                flex-flow: row wrap;
+                padding-top: 2em;
+
+                & li {
+                    flex: 0 0 100%;
+                    padding-top: 0;
+                    border-top: none;
+                    border-bottom: 3px solid transparent;
+
+                    & a {
+                        margin: 0 -9px;
+                        padding: 9px;
+                        color: #b13b4c;
+                        text-decoration: none;
+                        font-size: 0.75em;
+                        display: block;
+                        text-align: center;
+
+                        &:hover,
+                        &:focus {
+                            color: #fff;
+                        }
+                    }
+
+                    &.current-page {
+                        border-bottom-color: #fff; // TODO: GRADIENT
+                        background-color: rgba(#fff, 0.1);
+
+                        & a {
+                            color: #fff;
+                        }
+                    }
+
+                    &:before {
+                        content: '';
+                        display: none;
+                    }
+                }
+            }
         }
 
         & .social-bar {
             & ul {
-                margin: 0;
-                padding-top: 15px;                    
-                justify-content: flex-end;
+                margin: 0;               
+                padding-top: 0;
+                justify-content: center;
+                background-color: rgba(#fff, 0.2);
             }
         }
 
@@ -183,23 +193,9 @@ nav.navigation-bar {
             max-width: 110px;
         }
 
-        & .social-bar {
-            font-size: 0.8em;
-
-            & ul {
-                padding-top: 10px;
-
-                & li {
-                    margin: 0 0.5em;
-                }
-            }
-        }
-
         & .nav-bar {
-            &.mobile-only {
-                & ul {
-                    padding-top: 1em;
-                }
+            & ul {
+                padding-top: 1em;
             }
         }
 
@@ -216,6 +212,7 @@ footer.site-footer {
         align-items: flex-start;
         flex-flow: row wrap;
     }
+
     & .identity {
         padding-top: 5em;
         flex: 0 0 auto;
@@ -288,4 +285,12 @@ footer.site-footer {
         color: #a33b11;
         margin: 2.5em 0;
     }
+
+    @media screen and (max-width: 991px) {
+        height: 500px;
+        
+        & .identity {
+            flex: 0 0 100%;
+        }
+    }    
 }
