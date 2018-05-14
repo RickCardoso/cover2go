@@ -1,0 +1,36 @@
+body {
+    font-family: $museo-sans;
+    font-weight: 300;
+}
+
+strong {
+    font-weight: 500;
+}
+
+.highlight {
+    color: #d94a48;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul.phone-bullet {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    & li {
+        padding-left: 2em;
+        position: relative;
+
+        &:before {
+            content: url('assets/icons/phone-bullet.png');
+            display: block;
+            position: absolute;
+            top: 0.25em;
+            left: 0;
+        }
+    }
+}
