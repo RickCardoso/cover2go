@@ -32,6 +32,10 @@ section.hero {
         @media screen and (max-width: 575px) {
             font-size: 1.8em;
         }
+        
+        @media screen and (max-width: 414px) {
+            margin-top: 2em;
+        }
     }
 
     & .code-activation-wrapper {
@@ -219,10 +223,20 @@ section.hero {
 
         @media screen and (max-width: 575px) {
             margin-bottom: 0;
+            margin-top: 80%;
+        }
+
+        @media screen and (max-width: 414px) {
+            margin-bottom: 0;
+            margin-top: 150%;
         }
     }
 
     @media screen and (max-width: 575px) {
-        background-position-y: 7em;
+        background-position-y: 56%;
+    }
+
+    @media screen and (max-width: 414px) {
+        background-position-y: 60%;
     }
 }
